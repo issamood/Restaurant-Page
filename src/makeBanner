@@ -1,0 +1,38 @@
+export default function banner(){
+    const element = document.createElement('div');
+    element.classList.add('banner');
+
+    const title = document.createElement('div');
+    title.innerHTML = "Luxe"
+    title.classList.add('title');
+
+    const menuContainer = document.createElement('div');
+    menuContainer.classList.add('menuContainer');
+
+    const Home = document.createElement('div');
+    const Menu = document.createElement('div');
+    const Contact = document.createElement('div');
+
+    Home.innerHTML = 'Home';
+    Menu.innerHTML = 'Menu';
+    Contact.innerHTML = 'Contact';
+
+    Home.classList.add('menuChoice');
+    Menu.classList.add('menuChoice');
+    Contact.classList.add('menuChoice');
+
+    Home.classList.add('hvr-float');
+    Menu.classList.add('hvr-float');
+    Contact.classList.add('hvr-float');
+
+    menuContainer.appendChild(Home);
+    menuContainer.appendChild(Menu);
+    menuContainer.appendChild(Contact);
+
+    element.appendChild(title);
+    element.appendChild(menuContainer);
+
+    return element;
+}
+
+
