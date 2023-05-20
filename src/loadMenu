@@ -1,0 +1,82 @@
+export default function loadMenu(stage){
+    stage.setAttribute('id','grid');
+    //Adding Salmon
+    const salmon = document.createElement('div');
+    const salmonImg = document.createElement('div');
+    const salmonInfo = document.createElement('div');
+
+    salmon.classList.add('menuItem');
+
+    salmonImg.classList.add('menuImg');
+    salmonImg.setAttribute('id','salmonImg');
+    salmonImg.setAttribute('alt','Deliciously cooked Salmon');
+
+    salmonInfo.innerHTML = "Pan Seared Salmon"
+    salmonInfo.classList.add('menuInfo');
+
+    salmon.appendChild(salmonImg);
+    salmon.appendChild(salmonInfo);
+    
+    stage.appendChild(salmon);
+
+    //Adding Steak
+    const steak = document.createElement('div');
+    const steakImg = document.createElement('div');
+    const steakInfo = document.createElement('div');
+
+    steak.classList.add('menuItem');
+
+    steakImg.setAttribute('id','steakImg');
+    steakImg.classList.add('menuImg');
+    steakImg.setAttribute('alt', 'Perfectly cooked Wagyu Steak imported from Japan');
+
+    steakInfo.innerHTML = "Wagyu Steak"
+    steakInfo.classList.add('menuInfo');
+
+    steak.appendChild(steakImg);
+    steak.appendChild(steakInfo);
+
+    stage.appendChild(steak);
+
+    //Adding vegan
+    const vegan = document.createElement('div');
+    const veganImg = document.createElement('div');
+    const veganInfo = document.createElement('div');
+
+    vegan.classList.add('menuItem')
+
+    veganImg.setAttribute('id','veganImg');
+    veganImg.classList.add('menuImg');
+    veganImg.setAttribute('alt', 'Vegan based dish cooked beautifully');
+
+
+    veganInfo.innerHTML = "Vegan Based"
+    veganInfo.classList.add('menuInfo');
+
+    vegan.appendChild(veganImg);
+    vegan.appendChild(veganInfo);
+
+    stage.appendChild(vegan);
+
+    //Adding duck
+    const duck = document.createElement('div');
+    const duckImg = document.createElement('div');
+    const duckInfo = document.createElement('div');
+
+    duck.classList.add('menuItem')
+
+    duckImg.setAttribute('id','duckImg');
+    duckImg.classList.add('menuImg');
+    duckImg.setAttribute('alt', 'Delicately cooked to deliciousness the duck');
+
+
+    duckInfo.innerHTML = "It's Duck"
+    duckInfo.classList.add('menuInfo');
+
+    duck.appendChild(duckImg);
+    duck.appendChild(duckInfo);
+
+    stage.appendChild(duck);
+
+    return stage;
+}

@@ -1,6 +1,6 @@
 .banner {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgb(144,166,141);
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -9,32 +9,62 @@
     min-height: 14rem;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
+    padding-bottom: 1rem;
+    z-index: 1;
+
 }
 
 html {
     background: url(mainroom.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    font-family: 'Quicksand', sans-serif;
+    
+    
+}
+
+body{
+    margin: 0;
+    
 }
 
 #content{
-    width: 50px;
-    height: 50px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* bodoni-moda-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/bodoni-moda-v23-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('fonts/bodoni-moda-v23-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+/* quicksand-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/quicksand-v30-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('fonts/quicksand-v30-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
 .title{
-    padding-top: 1rem;
-    font-family: 'Rufina', serif;
     font-size: 7rem;
     color: #F4EFE5;
+    font-family: 'Bodoni Moda', sans-serif;
 }
 
 .menuChoice {
     color: #F4EFE5;
-    font-family: 'Rufina', serif;
     font-size: 30px;
 }
 
@@ -61,4 +91,181 @@ html {
     flex-direction: row;
     justify-content: center;
     column-gap: 3rem;
+}
+
+.selected {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: F4EFE5;
+}
+
+.stage {
+    width: 85vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 7rem;
+    position: fixed;
+    top: 11rem;
+}
+
+#flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 16rem);
+    gap: 9rem;
+    max-height: 59vh;
+    overflow-y: scroll;
+    padding-top: 2rem;
+}
+
+#grid::-webkit-scrollbar {
+    width: 10px;
+}
+
+#grid::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+#grid::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.message{
+    color: #F4EFE5;
+    font-size: 23px;
+    margin: 20px;
+}
+
+.icon{
+    background: url('./images/spideyman.jpg') no-repeat center center fixed;
+    background-size: cover;
+    scale: 1;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+    margin-top: 2rem;
+}
+
+.menuItem {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+}
+
+#salmonImg{
+    background: url(./images/salmon.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-position: 0% 80%;
+    scale: 1;
+}
+
+.menuImg {
+    margin: 3rem;
+    width: 17rem;
+    height: 17rem;
+    z-index: -1;
+}
+
+#steakImg{
+    background: url(./images/steak.jpg) no-repeat center center fixed;
+    background-size: cover;
+    scale: 1;
+    background-position: 90% 50%;
+}   
+
+#veganImg{
+    background: url(./images/vegan.jpg) no-repeat center center fixed;
+    background-size: cover;
+    scale: 1;
+}
+
+#duckImg{
+    background: url(./images/duck.jpg) no-repeat center center fixed;
+    background-size: cover;
+    scale: 1.1;
+    background-position: 0% 0%;
+}
+
+.menuInfo {
+    text-align: center;
+    color: #F4EFE5;
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+
+.numberContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.numberIcon {
+    background: url(./images/phone.svg) no-repeat center center fixed;
+    background-size: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    margin: 2rem;
+    margin-right: 1rem;
+    
+    scale: 1;
+    color: #F4EFE5;
+}   
+
+.numberInfo {
+    color: #F4EFE5;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 6.5rem;
+    font-size: 1.5rem;
+    
+}
+
+.addressIcon{
+    background: url(./images/address.svg) no-repeat center center fixed;
+    background-size: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 2rem;
+    margin-right: 1rem;
+    scale: 1;
+
+}
+
+.addressInfo {
+    color: #F4EFE5;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 6.5rem;
+    font-size: 1.3rem;
+    
+}
+
+.addressImage{
+    background: url(./images/addressimage.png) no-repeat center center fixed;
+    background-size: cover;
+    scale: 1;
+    width: 15rem;
+    height: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+#contactFlex{
+    display: flex;
+    flex-direction: column;
 }

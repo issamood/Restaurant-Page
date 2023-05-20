@@ -1,0 +1,26 @@
+export default function loadHome(stage){
+    stage.setAttribute('id','flex');
+    const stageMessage = document.createElement('div');
+    const stageMessageTwo = document.createElement('div');
+    const stageImage = document.createElement('div');
+    const stageMessageThree = document.createElement('div');
+
+    stageMessage.classList.add('message')
+    stageMessage.setAttribute('id','one');
+    stageMessageTwo.classList.add('message');
+    stageMessageTwo.setAttribute('id','two');
+    stageMessageThree.classList.add('message');
+    stageMessageThree.setAttribute('id','three');
+    stageImage.classList.add('icon');
+
+    stageMessage.innerHTML = "Elevating modern food using modern techniques"
+    stageMessageTwo.innerHTML = "\"Just kidding, I have no idea what I'm doing\" - Chef";
+    stageMessageThree.innerHTML = "Come visit in New York!"
+
+    stage.appendChild(stageMessage);
+    stage.appendChild(stageMessageTwo);
+    stage.appendChild(stageImage);
+    stage.appendChild(stageMessageThree);
+
+    return stage;
+}

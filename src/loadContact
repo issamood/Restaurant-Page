@@ -1,0 +1,39 @@
+export default function loadContact(stage){
+    stage.setAttribute('id','contactFlex');
+
+    const numberContainer = document.createElement('div');
+    const numberIcon = document.createElement('div');
+    const numberInfo = document.createElement('div');
+
+    numberContainer.classList.add('numberContainer');
+
+    numberIcon.classList.add('numberIcon');
+    numberInfo.innerHTML = "123 456 789";
+    numberInfo.classList.add('numberInfo');
+
+    numberContainer.appendChild(numberIcon);
+    numberContainer.appendChild(numberInfo);
+
+    stage.appendChild(numberContainer);
+
+    const addressContainer = document.createElement('div');
+    const addressIcon = document.createElement('div');
+    const addressInfo = document.createElement('div');
+
+    addressContainer.classList.add('numberContainer');
+
+    addressIcon.classList.add('addressIcon');
+    addressInfo.innerHTML = "7 Carmine St, New York, NY 10014"
+    addressInfo.classList.add('addressInfo');
+
+    addressContainer.appendChild(addressIcon);
+    addressContainer.appendChild(addressInfo);
+
+    stage.appendChild(addressContainer);
+
+    const addressImage = document.createElement('div');
+    addressImage.classList.add('addressImage');
+    stage.appendChild(addressImage);
+
+    return stage;
+}

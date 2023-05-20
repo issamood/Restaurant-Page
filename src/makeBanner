@@ -18,8 +18,13 @@ export default function banner(){
     Contact.innerHTML = 'Contact';
 
     Home.classList.add('menuChoice');
+    Home.classList.add('selected');
     Menu.classList.add('menuChoice');
     Contact.classList.add('menuChoice');
+
+    Home.setAttribute('id','Home');
+    Menu.setAttribute('id','Menu');
+    Contact.setAttribute('id','Contact');
 
     Home.classList.add('hvr-float');
     Menu.classList.add('hvr-float');
