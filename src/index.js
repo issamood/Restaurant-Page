@@ -17,10 +17,7 @@ const stage = document.createElement('div');
 stage.classList.add('stage');
 stage.setAttribute('id','grid');
 
-loadMenu(stage);
-
-//Temporarily off to see menu content
-//loadHome(stage);
+loadHome(stage);
 content.appendChild(stage);
 
 //Remove Child Node Function
